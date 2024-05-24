@@ -10,6 +10,10 @@ import upload from '../utils/upload.js';
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+    res.json("Hello");
+})
+
 router.post('/login', loginUser);
 router.post('/signup', singupUser);
 router.post('/logout', logoutUser);
