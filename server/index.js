@@ -12,7 +12,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  origin:["https://blog-gen-q2yq.vercel.app"],
+  methods:["POST","GET","PUT","DELETE"],
+  credentials:true
+  
+));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', Router);
