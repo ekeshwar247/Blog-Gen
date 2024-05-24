@@ -13,11 +13,11 @@ dotenv.config();
 const app = express();
 
 app.use(cors(
-  "origin":"https://blog-gen-q2yq.vercel.app/",
-  "allowedHeaders": ["sessionId", "Content-Type"],
-  "exposedHeaders": ["sessionId"],
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
+  origin:["https://blog-gen-q2yq.vercel.app"],
+  // "allowedHeaders": ["sessionId", "Content-Type"],
+  // "exposedHeaders": ["sessionId"],
+  methods: ["GET","HEAD","PUT","PATCH","POST","DELETE"],
+  // "preflightContinue": false,
   credentials:true
   
 ));
