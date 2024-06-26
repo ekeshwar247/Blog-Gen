@@ -59,7 +59,7 @@ const Error = styled(Typography)`
     line-height: 0;
     margin-top: 10px;
     font-weight: 600;
-`
+`;
 
 const loginInitialValues = {
     username: '',
