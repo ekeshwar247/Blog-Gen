@@ -6,60 +6,138 @@ import { useNavigate } from 'react-router-dom';
 import { API } from '../../service/api';
 import { DataContext } from '../../context/DataProvider';
 
+// const Component = styled(Box)`
+//     width: 400px;
+//     margin: auto;
+//     box-shadow: 5px 2px 5px 2px rgb(0 0 0/ 0.6);
+// `;
+
+// const Image = styled('img')({
+//     height: 80,
+//     width: 320,
+//     display: 'flex',
+//     margin: 'auto',
+//     padding: '50px 0 0'
+// });
+
+// const Wrapper = styled(Box)`
+//     padding: 25px 35px;
+//     display: flex;
+//     flex: 1;
+//     overflow: auto;
+//     flex-direction: column;
+//     & > div, & > button, & > p {
+//         margin-top: 20px;
+//     }
+// `;
+
+// const LoginButton = styled(Button)`
+//     text-transform: none;
+//     background: #FB641B;
+//     color: #fff;
+//     height: 48px;
+//     border-radius: 2px;
+// `;
+
+// const SignupButton = styled(Button)`
+//     text-transform: none;
+//     background: #fff;
+//     color: #2874f0;
+//     height: 48px;
+//     border-radius: 2px;
+//     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+// `;
+
+// const Text = styled(Typography)`
+//     color: #878787;
+//     font-size: 12px;
+// `;
+
+// const Error = styled(Typography)`
+//     font-size: 10px;
+//     color: #ff6161;
+//     line-height: 0;
+//     margin-top: 10px;
+//     font-weight: 600;
+// `;
+
 const Component = styled(Box)`
-    width: 400px;
-    margin: auto;
-    box-shadow: 5px 2px 5px 2px rgb(0 0 0/ 0.6);
+    width: 450px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 8px 2px rgb(50 50 93 / 0.1), 0px 1px 4px 0px rgb(0 0 0 / 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
 `;
 
 const Image = styled('img')({
-    height: 80,
-    width: 320,
+    height: 100,
+    width: 300,
     display: 'flex',
-    margin: 'auto',
-    padding: '50px 0 0'
+    margin: '20px auto',
+    padding: '20px 0',
+    borderRadius: '5px',
 });
 
 const Wrapper = styled(Box)`
-    padding: 25px 35px;
+    padding: 20px 30px;
     display: flex;
     flex: 1;
     overflow: auto;
     flex-direction: column;
+    background: #ffebcd;
     & > div, & > button, & > p {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 `;
 
 const LoginButton = styled(Button)`
     text-transform: none;
-    background: #FB641B;
-    color: #fff;
-    height: 48px;
-    border-radius: 2px;
+    background: #1976d2;
+    color: #ffffff;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    &:hover {
+        background: #1565c0;
+    }
 `;
 
 const SignupButton = styled(Button)`
     text-transform: none;
-    background: #fff;
-    color: #2874f0;
-    height: 48px;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    background: #ffffff;
+    color: #1976d2;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+    &:hover {
+        background: #f1f1f1;
+    }
 `;
 
 const Text = styled(Typography)`
-    color: #878787;
-    font-size: 12px;
+    color: #6c757;
+    font-size: 14px;
 `;
 
 const Error = styled(Typography)`
-    font-size: 10px;
-    color: #ff6161;
-    line-height: 0;
-    margin-top: 10px;
-    font-weight: 600;
+    font-size: 12px;
+    color: #d32f2f;
+    line-height: 1.5;
+    margin-top: 8px;
+    font-weight: 500;
 `;
+
+const Background = styled(Box)`
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`;
+
 
 const loginInitialValues = {
     username: '',
@@ -128,6 +206,7 @@ const Login = ({ isUserAuthenticated }) => {
     }
 
     return (
+        <Background>
         <Component>
             <Box>
                 <Image src={ require('./logo.jpg') } />
@@ -155,6 +234,7 @@ const Login = ({ isUserAuthenticated }) => {
                 }
             </Box>
         </Component>
+        </Background>
     )
 }
 
